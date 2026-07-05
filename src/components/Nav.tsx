@@ -1,14 +1,14 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { SITE } from "@/lib/data";
 import { ExternalArrow } from "./Icons";
+import Logo from "./Logo";
 
 const LINKS = [
-  { href: "#picks", label: "Reviews" },
-  { href: "#categories", label: "AI Tools" },
-  { href: "#deal", label: "Deals" },
-  { href: "#how", label: "How we test" },
+  { href: "/#picks", label: "Reviews" },
+  { href: "/blog", label: "Insights" },
+  { href: "/#deal", label: "Deals" },
+  { href: "/#how", label: "How we test" },
 ];
 
 export default function Nav() {
@@ -32,12 +32,7 @@ export default function Nav() {
   return (
     <header className={`nav${stuck ? " stuck" : ""}`} id="nav">
       <div className="wrap nav-in">
-        <a className="brand" href="#top" aria-label="LiteInsight home">
-          <span className="mark" aria-hidden="true" />
-          <span>
-            LiteInsight<small>{SITE.tagline}</small>
-          </span>
-        </a>
+        <Logo href="#top" />
 
         <nav className="nav-links" aria-label="Primary">
           {LINKS.map((l) => (
@@ -45,16 +40,16 @@ export default function Nav() {
               {l.label}
             </a>
           ))}
-          <a href="#grow" className="grow-link">
+          <a href="/#grow" className="grow-link">
             Grow <ExternalArrow className="ext" />
           </a>
         </nav>
 
         <div className="nav-cta">
-          <a href="#picks" className="btn btn-ghost btn-sm">
+          <a href="/#picks" className="btn btn-ghost btn-sm">
             Browse picks
           </a>
-          <a href="#newsletter" className="btn btn-spark btn-sm">
+          <a href="/#newsletter" className="btn btn-spark btn-sm">
             Get the newsletter
           </a>
         </div>
@@ -75,10 +70,10 @@ export default function Nav() {
             {l.label}
           </a>
         ))}
-        <a href="#grow" onClick={() => setOpen(false)}>
+        <a href="/#grow" onClick={() => setOpen(false)}>
           Grow by LiteInsight ↗
         </a>
-        <a href="#newsletter" className="btn btn-spark" onClick={() => setOpen(false)}>
+        <a href="/#newsletter" className="btn btn-spark" onClick={() => setOpen(false)}>
           Get the newsletter
         </a>
       </div>

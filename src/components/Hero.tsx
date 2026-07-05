@@ -14,11 +14,11 @@ export default function Hero() {
         <div className="hero-copy reveal">
           <span className="eyebrow">{SITE.motto}</span>
           <h1 className="h1">
-            The clever way to choose <em>digital products.</em>
+            Always Lite. Always <em>Clever.</em>
           </h1>
           <p className="lead">
-            LiteInsight tests, reviews and ranks the best software, AI tools and digital
-            products — so you buy the right one the first time, at the best price.
+            LiteInsight reviews digital products and publishes clever, easy-to-read insights
+            across the niches you care about — smart, simple and effective, never complicated.
           </p>
           <div className="hero-actions">
             <a href="#picks" className="btn btn-spark">
