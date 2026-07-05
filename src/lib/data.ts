@@ -12,8 +12,16 @@ export const SITE = {
   whatsapp: "917028466160",
   whatsappDisplay: "+91 70284 66160",
   growUrl: "https://grow.liteinsight.in/",
+  insigtradeUrl: "https://insigtrade.com/",
   readers: "40,000+",
 } as const;
+
+// The LiteInsight family of brands (parent + verticals), used in the footer.
+export const BRANDS = [
+  { name: "LiteInsight", note: "Digital products & reviews", href: "/#top", dot: "", external: false },
+  { name: "Grow by LiteInsight", note: "Websites in 24 hours", href: "https://grow.liteinsight.in/", dot: "#12B981", external: true },
+  { name: "InsigTrade by LiteInsight", note: "AI trading intelligence", href: "https://insigtrade.com/", dot: "#0EA5B7", external: true },
+] as const;
 
 export type FilterKey = "all" | "ai" | "prod" | "design" | "mktg";
 

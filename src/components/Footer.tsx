@@ -1,4 +1,4 @@
-import { SITE } from "@/lib/data";
+import { SITE, BRANDS } from "@/lib/data";
 import { WhatsApp, XSocial, Instagram, LinkedIn, WhatsAppSimple } from "./Icons";
 import Logo from "./Logo";
 
@@ -44,14 +44,22 @@ export default function Footer() {
 
           <div className="ft-col">
             <h5>Our brands</h5>
-            <a href="#top">LiteInsight</a>
-            <a href={SITE.growUrl} target="_blank" rel="noopener noreferrer">
-              Grow by LiteInsight <span className="gdot" />
-            </a>
-            <a href="#footer">Become a partner</a>
-            <a href={wa} target="_blank" rel="noopener noreferrer">
-              WhatsApp us
-            </a>
+            {BRANDS.map((b) => (
+              <a
+                key={b.name}
+                href={b.href}
+                className="ft-brand-link"
+                {...(b.external
+                  ? { target: "_blank", rel: "noopener noreferrer" }
+                  : {})}
+              >
+                <span className="ft-brand-name">
+                  {b.name}
+                  {b.dot && <span className="bdot" style={{ background: b.dot }} />}
+                </span>
+                <span className="ft-brand-note">{b.note}</span>
+              </a>
+            ))}
           </div>
         </div>
 
