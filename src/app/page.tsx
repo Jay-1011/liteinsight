@@ -9,6 +9,7 @@ import Categories from "@/components/Categories";
 import DealOfWeek from "@/components/DealOfWeek";
 import Grow from "@/components/Grow";
 import Testimonials from "@/components/Testimonials";
+import InsightsTeaser from "@/components/InsightsTeaser";
 import Newsletter from "@/components/Newsletter";
 import Faq from "@/components/Faq";
 import FinalCta from "@/components/FinalCta";
@@ -31,6 +32,7 @@ export default function Home() {
         <DealOfWeek />
         <Grow />
         <Testimonials />
+        <InsightsTeaser />
         <Newsletter />
         <Faq />
         <FinalCta />
