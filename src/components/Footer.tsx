@@ -1,5 +1,5 @@
 import { SITE, BRANDS } from "@/lib/data";
-import { WhatsApp, XSocial, Instagram, LinkedIn, WhatsAppSimple } from "./Icons";
+import { WhatsApp } from "./Icons";
 import Logo from "./Logo";
 
 const YEAR = new Date().getFullYear();
@@ -66,20 +66,6 @@ export default function Footer() {
         <div className="ft-bot">
           <div>
             © {YEAR} LiteInsight. {SITE.tagline}.
-          </div>
-          <div className="social">
-            <a href="#" aria-label="X">
-              <XSocial />
-            </a>
-            <a href="#" aria-label="Instagram">
-              <Instagram />
-            </a>
-            <a href="#" aria-label="LinkedIn">
-              <LinkedIn />
-            </a>
-            <a href={wa} target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
-              <WhatsAppSimple />
-            </a>
           </div>
         </div>
         <div className="ft-disc">
